@@ -17,3 +17,7 @@ Content-Type: application/json
     "username": "dodo",
     "password": "22222"
 }
+
+##########
+POST http://localhost:4000/users/posts
+Content-Type: application/json
