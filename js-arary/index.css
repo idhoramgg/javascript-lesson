@@ -1,0 +1,89 @@
+
+.body, html {
+    font-family: 'Pangolin', cursive;
+}
+
+.container {
+    display: flex;
+    background-color: #00FFFF;
+    border: 1px solid black;
+}
+.bodytweet {
+    display: flexbox;
+    /* border: 1px solid black; */
+    width: 400px;
+    padding: 10px;
+}
+.bodytweet h2 {
+    font-family: 'Pangolin', cursive;
+    text-align: left;
+    margin-left: 80px;
+}
+
+#area {
+    padding: 20px;
+    border-radius: 50px 20px;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+}
+#area:focus {
+    border-radius: 50px 20px;
+    outline: none !important;
+
+}
+
+.btn {
+    font-size: 25px;
+    padding: 20px 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    background-color: white;
+    text-align: center;
+
+}
+
+.displayTweet {
+    display: flexbox;
+    /* border: 1px solid black; */
+    width: 500px;
+    height: auto;
+    padding: 10px;
+}
+.displayTweet .box-tweet{
+    width: 100%;
+    max-height:100%;
+
+}
+.box-p {
+    padding: 5px;
+    background-color: white;
+    /* background-color: green; */
+    border-radius: 20px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+}
+.box-p p {
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+}
+.iconTweet {
+    text-align: right;
+    margin-right: 20px;
+}
+
+p .like, p .dislike {
+    font-size: 15px;
+    margin: 10px;
+}
+
+.time {
+    margin-left: 10px;
+    font-size: 10px;
+}

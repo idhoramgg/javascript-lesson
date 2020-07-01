@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6e3a4839af.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="bodytweet">
+            <h2>New Tweet</h2>
+            <form type="submit" onsubmit="">
+                <textarea id="area" name="twit" cols="30" rows="10"></textarea>
+                <br><br>
+                <button class="btn" type="submit" onclick="saveTweet(event)">Tweet</button>
+            </form>
     
-
+        </div>
+        
+        <div class="displayTweet">
+            <h2>Tweet</h2>
+            <div class="box-tweet">
+                <p id="twit">
+    
+                </p>
+            </div>
+        </div>
+    </div>
+    
 <script src="index.js"></script>
 
 </body>

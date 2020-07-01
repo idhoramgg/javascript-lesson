@@ -41,12 +41,15 @@ app.post('/users', async (req, res) => {
         const user = {username: req.body.username,
         password: hashedPassword}
 
-        jwt.sign({user}, 'secret', {expiresIn: '10h'}, (error, token) => {
-            console.log(`your token = ${token}`);
-            
-            res.json({
-                token,
-            })
+        jwt.sign({user}, 'secret', {expiresIn: '10h'}, (error, token) => {   
+            if(error){
+                console.log(error)
+                
+            } else {
+                res.json({
+                    token,
+                })    
+            }             
         })
 
         users.push(user)
