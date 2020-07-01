@@ -99,8 +99,12 @@ let saveTweet = event => {
     if(form.length > 140){
         alert(`Maksimum karakter adalah 140`)
     }
-     tweet.unshift(form)
-     document.getElementById('twit').innerHTML = display()
+    if(form.length == 0){
+        alert(`Isi apa yang kamu mau tulis`)
+    } else {
+        tweet.unshift(form)
+        document.getElementById('twit').innerHTML = display()
+    }
 }
 
 
