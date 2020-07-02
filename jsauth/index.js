@@ -1,12 +1,22 @@
 const express = require('express');
+
 const app = express();
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken');
+const cors = require('cors')
+
+
 
 app.use(express.json())
+app.use(cors())
+
+
+
+app.use(express.urlencoded({ extended: true }));
 
 
 const users = []
+const posts =['secret page']
 
 // verifikasi token
 const verifyToken = (req, res, next) => {
@@ -30,13 +40,15 @@ app.get('/users', (req, res) => {
   res.json(users)
 })
 
-app.post('/users', async (req, res) => {
+
+
+app.post('/users/register', async (req, res) => {
     try {
         // const salt = await bcrypt.genSalt()
         // const hashedPassword = await bcrypt.hash(req.body.password, salt)
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         // console.log(salt)
-        console.log(hashedPassword)
+        // console.log(hashedPassword)
         
         const user = {username: req.body.username,
         password: hashedPassword}
@@ -46,17 +58,20 @@ app.post('/users', async (req, res) => {
                 console.log(error)
                 
             } else {
+                console.log(token); // check token for testing
+                
                 res.json({
                     token,
-                })    
-            }             
+                })
+            }                         
         })
-
+        
         users.push(user)
-        res.json({
-            status: 200,
-            message: 'Success'
-        })
+        res.redirect('/users/login')             
+       // res.json({
+        //     status: 200,
+        //     message: 'Success'
+        // })
     
     } catch(err) {
         res.status(500).send()
@@ -65,6 +80,7 @@ app.post('/users', async (req, res) => {
     } 
 })
 
+
 app.post('/users/login', async (req, res) => {
     const user = users.find(user => user.name === req.body.name)
     if(user == null){
@@ -72,7 +88,10 @@ app.post('/users/login', async (req, res) => {
     }
     try {
         if(await bcrypt.compare(req.body.password, user.password)) {
+            
             res.status(200).send(`Success`)
+            res.redirect('/dashboard')
+            console.log(token);
         } else {
             res.status(400).send(`Not allowed`)
         }
@@ -85,21 +104,19 @@ app.post('/users/login', async (req, res) => {
 })
 
 app.post('/users/posts', verifyToken, (req, res) => {
-    const newPost = req.body.post
     jwt.verify(req.token, 'secret', (err, authData) => {
         if(err) {
             res.sendStatus(403);
             
         } else {
             res.json({
-                message: `Post Created.....`,
-                comment : newPost,
+                message: `Welcome`,
+                comment : posts,
                 authData
             })
         }
     })
 })
-
 
 
 
