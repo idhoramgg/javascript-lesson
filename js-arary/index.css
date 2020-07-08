@@ -22,10 +22,14 @@ body {
     /* border: 1px solid black; */
     width: 400px;
     padding: 10px;
+    margin-left: 30px;
 }
 .bodytweet h2 {
     font-family: 'Pangolin', cursive;
     text-align: left;
+    margin-left: 80px;
+}
+.bodytweet button {
     margin-left: 80px;
 }
 
@@ -62,9 +66,13 @@ body {
     height: auto;
     padding: 10px;
 }
+.displayTweet h2 {
+    margin-left: 120px;
+}
 .displayTweet .box-tweet{
     width: 100%;
     max-height:100%;
+    margin-left: 120px;
 
 }
 .box-p {

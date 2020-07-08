@@ -92,19 +92,19 @@ let display = () => {
     })
     return bodyy
 }
-
 let saveTweet = event => {
     event.preventDefault()
     let form = document.getElementById('area').value
     if(form.length > 140){
         alert(`Maksimum karakter adalah 140`)
     }
+    //
     if(form.length == 0){
         alert(`Isi apa yang kamu mau tulis`)
     } else {
         tweet.unshift(form)
         document.getElementById('twit').innerHTML = display()
-    }
+    } 
 }
 
 

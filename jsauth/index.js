@@ -67,11 +67,10 @@ app.post('/users/register', async (req, res) => {
         })
         
         users.push(user)
-        res.redirect('/users/login')             
-       // res.json({
-        //     status: 200,
-        //     message: 'Success'
-        // })
+       res.json({
+            status: 200,
+            message: 'Success'
+        })
     
     } catch(err) {
         res.status(500).send()

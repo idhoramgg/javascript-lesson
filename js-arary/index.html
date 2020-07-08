@@ -12,24 +12,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="bodytweet">
-            <h2>New Tweet</h2>
-            <form type="submit" onsubmit="">
-                <textarea id="area" name="twit" cols="30" rows="10"></textarea>
-                <br><br>
-                <button class="buten" type="submit" onclick="saveTweet(event)">Tweet</button>
-            </form>
-    
-        </div>
+        <div class="row">
+            <div class="bodytweet">
+                <h2>New Tweet</h2>
+                <form type="submit" onsubmit="">
+                    <textarea id="area" name="twit" cols="30" rows="10"></textarea>
+                    <br><br>
+                    <button class="buten" type="submit" onclick="saveTweet(event)">Tweet</button>
+                </form>
         
-        <div class="displayTweet">
-            <h2>Tweet</h2>
-            <div class="box-tweet">
-                <p id="twit">
-    
-                </p>
+            </div>
+            
+            <div class="displayTweet">
+                <h2>Tweet</h2>
+                <div class="box-tweet">
+                    <p id="twit">
+        
+                    </p>
+                </div>
             </div>
         </div>
+        
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
