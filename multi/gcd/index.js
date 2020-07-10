@@ -69,10 +69,7 @@ let data = {
 
     let a = data.history[1].ride
     let b = data.history[0].food
-    let c = [a, ...b]
-    console.log(a);
-    
-    
+    let c = [a, ...b]    
 
     let ride = data.history.map(e => e.ride)
     let d;
