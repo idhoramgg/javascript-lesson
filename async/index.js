@@ -87,6 +87,9 @@ const olahDenganPromise = () => {
         document.getElementById('show').innerHTML = text
         
     })
+    .catch(error => {
+        console.log(error);
+    })
 }
 
 const register = () => {
