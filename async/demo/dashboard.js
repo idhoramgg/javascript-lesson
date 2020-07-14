@@ -1,18 +1,22 @@
 var endpoint = "https://5e92be81bbff810016969173.mockapi.io/api/v1/users"
 
+const welcome = () => {
+    let data = JSON.parse(localStorage.getItem('user'));
+    let user = data.name
+    let intro = ""
+    intro = `Welcome to the Dashboard, ${user}`
+    document.getElementById('welcome').innerHTML = intro
+}
 
-let data = JSON.parse(localStorage.getItem('user'));
-let user = data.name
-
-// btn
-document.getElementById('btnLogout').addEventListener('click', function(event){
+const logout = () => {
     event.preventDefault();
     localStorage.clear();
     window.location.replace('./index.html')
-})
-let intro = ""
-intro = `Welcome to the Dashboard, ${user}`
-document.getElementById('welcome').innerHTML = intro
+}
+document.getElementById('btnLogout').addEventListener('click', logout)
+
+
+
 
 // fungsi untuk menampilkan semua data user
 
@@ -22,7 +26,7 @@ const tampilData = async () => {
     let text = ""
     let datas = response.map(data => {
         text += `<li> ID : ${data.id} <br>
-                      Name : ${data.name} <br>
+                      Name : ${data.fullName} <br>
                       Email : ${data.email} <br>
                       Phone: ${data.phoneNumber}</li>
                       <button id="del" onclick=deleteData(${data.id})> Delete </button>
@@ -62,10 +66,11 @@ const showData = async (event, id) => {
     if(response){
         alert(` 
                ID: ${response.id}
-               Name: ${response.name}
+               Name: ${response.fullName}
                Email: ${response.email}
                Phone: ${response.phoneNumber}
         `)  
     }
 }
+welcome()
 tampilData()

@@ -25,16 +25,16 @@ const p1 = () => {
 const p2 = () => {
     setTimeout(() => {
         console.log(`p2 selesai dijalankan`)
-    },300)
+    },3000)
 };
-
-// const p2 = () => {
-//     console.log(`p2 selesai dijalankan`);
-// }
 
 const p3 = () => {
+    p1()
+    p2()
     console.log(`p3 selesai dijalankan`);
 };
+
+p3();
 
 // p1();
 // p2();
@@ -51,9 +51,9 @@ const janji = new Promise((resolve, reject) => {
         reject(new Error('Rejection'))
     }
 })
-    // janji
-    //     .then(result => console.log(result))
-    //     .catch(error => console.error(error))
+    janji
+        .then(result => console.log(result))
+        .catch(error => console.error(error))
 
 // async/await
 

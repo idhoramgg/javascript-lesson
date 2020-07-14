@@ -91,7 +91,8 @@ const contohPromise = () => {
         }
     }).then(result => console.log(result))
       .catch(error => console.log(error))
-} 
+}
+contohPromise()
 
 // contoh Promise req API dengan fetch()
     // fetch() -> function bawaan javascript untuk mengambil/mengolah data API
@@ -158,7 +159,7 @@ const hello1 = async () => {
 
 // contoh fetch data API menggunakan async/await
 
-const getDataAPI2 = async () => {
+const getDataAPIwithAsync = async () => {
     const API = "https://5e92be81bbff810016969173.mockapi.io/api/v1/users";
     const option = {
         method: "GET"
@@ -166,17 +167,9 @@ const getDataAPI2 = async () => {
 
     let response = await fetch(API, option)
     response = await response.json()
-    // console.log(response);
-    response.map(element => {
-        const obj = {
-            ID: element.id,
-            email: element.email,
-            password: element.password
-        }
-        console.log(obj);
-    })
+    console.log(response);
 }
-getDataAPI2()
+getDataAPIwithAsync()
 
 
 
