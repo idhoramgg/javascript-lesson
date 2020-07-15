@@ -15,7 +15,7 @@ function getUser() {
 		document.getElementById('cartName').innerHTML = "Cart";
 		document.getElementById('logoutButton').style.display = 'none';
 		document.getElementById('basket-container').style.display = 'none';
-		loadJSON(PATH);
+		getAll();
 	};
 	// getting all products on the main page.
 	getAll();
@@ -208,6 +208,11 @@ const getDataById = async (id) => {
 				</div>
 	`
 	document.getElementById('modal-content').innerHTML = text
-	
 
 }
+
+	// Logout current user
+	function logout() {
+		sessionStorage.clear();
+		window.location = './index.html'
+		}

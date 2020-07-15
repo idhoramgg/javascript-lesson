@@ -38,7 +38,7 @@ button:focus {
 header {
 	position: fixed;
 	width: 100%;
-	background-color:skyblue;
+	background-color:salmon;
 	/* background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
 	background: linear-gradient(to right, #ACB6E5, #74ebd5); */
 	display: flex;
@@ -125,7 +125,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	border: 1px solid #eee;
-	box-shadow: 0 2px 2px #ccc;
+	box-shadow: 0 4px 4px #777;
 	border-radius: 5px;
 }
 .card-product-item {
@@ -166,7 +166,7 @@ nav {
 	width: auto;
 	margin: 15px 0px;;
 	padding: 10px 25px;
-	background-color: lightblue;
+	background-color: salmon;
 	/* background: linear-gradient( 68.1deg,  rgba(61,114,180,1) 5.8%, rgb(54, 66, 85) 98.1% ); */
 	border-radius: 3px;
 	border: none;
@@ -174,13 +174,13 @@ nav {
 	cursor: pointer;
 }
 .btn:hover {
-	background: skyblue;
+	background: gray;
 	transition: ease 300ms;
 }
 
 footer {
 	align-content: flex-end;
-	background-color: skyblue;
+	background-color: salmon;
 	
 }
 
@@ -276,7 +276,7 @@ div[class^="foot-col"] {
 .category-bar {
 	height: 40px;
 	border: 1px solid #eee;
-	box-shadow: 0 0px 2px #ccc;
+	box-shadow: 0 0px 4px #777;
 	border-radius: 5px;
 	display: flex;
 	align-content: center;
