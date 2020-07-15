@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+   
+        }
+        .card {
+            min-width: 300px;
+            height: 200px;
+            background-color: #333;
+            color: #f3f3f3;
+            text-align: left;
+            margin: 20px;
+            padding: 10px;
+        }
+        .card:hover {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Data User</h1>
+    <hr>
+    <div class="container" id="container">
+        <button id="btn-card" class="btn-card" type="button">
+            <div id="card" class="card">
+            </div>    
+        </button>
+    </div>
+       
+    <script src="simple.js"></script>
+</body>
+</html>
