@@ -183,6 +183,8 @@ const closeModal = () => {
 close.addEventListener('click', closeModal);
 
 
+// dapetin data by ID waktu itemnya di klik.
+
 const getDataById = async (id) => {
 	const api = `https://5e92be81bbff810016969173.mockapi.io/api/v1/books/${id}`
 	
