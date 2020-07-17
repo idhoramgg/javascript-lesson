@@ -33,36 +33,46 @@ function getCart() {
 
 function getAll() {
 	renderProducts();
-	document.getElementById('cat-mob').classList.remove('active');
-	document.getElementById('cat-lap').classList.remove('active');
 	document.getElementById('cat-all').classList.add('active');
+	document.getElementById('cat-rom').classList.remove('active');
+	document.getElementById('cat-hum').classList.remove('active');
+	document.getElementById('cat-mot').classList.remove('active');
+	document.getElementById('cat-best').classList.remove('active');
 }
 
 function getRomance() {
 	renderProducts('Romance');
 	document.getElementById('cat-all').classList.remove('active');
-	document.getElementById('cat-lap').classList.remove('active');
-	document.getElementById('cat-mob').classList.add('active');
+	document.getElementById('cat-rom').classList.add('active');
+	document.getElementById('cat-mot').classList.remove('active');
+	document.getElementById('cat-best').classList.remove('active');
+	document.getElementById('cat-hum').classList.remove('active');
 }
 
 
 function getHumor() {
 	renderProducts('Humor');
 	document.getElementById('cat-all').classList.remove('active');
-	document.getElementById('cat-mob').classList.remove('active');
-	document.getElementById('cat-lap').classList.add('active');
+	document.getElementById('cat-mot').classList.remove('active');
+	document.getElementById('cat-rom').classList.remove('active');
+	document.getElementById('cat-best').classList.remove('active');
+	document.getElementById('cat-hum').classList.add('active');
 }
 function getMotivation() {
 	renderProducts('Motivation');
 	document.getElementById('cat-all').classList.remove('active');
-	document.getElementById('cat-mob').classList.remove('active');
-	document.getElementById('cat-lap').classList.add('active');
+	document.getElementById('cat-rom').classList.remove('active');
+	document.getElementById('cat-hum').classList.remove('active');
+	document.getElementById('cat-best').classList.remove('active');
+	document.getElementById('cat-mot').classList.add('active');
 }
-function getMantap() {
-	renderProducts('Mantap');
+function getBest() {
+	renderProducts('Best Seller');
 	document.getElementById('cat-all').classList.remove('active');
-	document.getElementById('cat-mob').classList.remove('active');
-	document.getElementById('cat-lap').classList.add('active');
+	document.getElementById('cat-best').classList.add('active');
+	document.getElementById('cat-rom').classList.remove('active');
+	document.getElementById('cat-hum').classList.remove('active');
+	document.getElementById('cat-mot').classList.remove('active');
 }
 
 // render products based on given categories
