@@ -45,7 +45,7 @@ async function renderCart() {
 	}
 	else {
 		alert("You must login first!!");
-		window.location = "./auth/login.html"
+		window.location = "../auth/login.html"
 	}
 
 }

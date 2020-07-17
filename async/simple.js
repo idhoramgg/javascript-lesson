@@ -27,7 +27,7 @@ function getCart() {
 		window.location = '/cart/cart.html'
 	} else {
 		alert("You must login to use cart");
-		window.location = '/auth/login.html';
+		window.location = '../auth/login.html';
 	}
 }
 
