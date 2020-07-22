@@ -12,7 +12,9 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="simple.css">
+	<link rel="stylesheet" href="simple.css">
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
 </head>
 <body onload="getUser()">
 	<!-- header start -->
@@ -37,6 +39,11 @@
 	<!-- header end -->
 	<!-- main start -->
 	<main class="container">
+		<div class="sub">
+			<label for="subscribe"> Subscribe:</label>
+			<input type="email" name="subscribe" id="sub" placeholder="Enter Your Email here">
+			<input type="button" value="Send Email" onclick="sendEmail()">
+		</div>
 		
 		<!-- <div class="welcome-text"><h3 id="welcome-text"></h3></div> -->
 		<div class="category-bar">

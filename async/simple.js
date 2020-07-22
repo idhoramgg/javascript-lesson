@@ -228,3 +228,53 @@ const getDataById = async (id) => {
 		sessionStorage.clear();
 		window.location = './index.html'
 		}
+	
+
+	// function subscribe
+	
+	let subEmail = document.getElementById('sub').value
+	const sendEmail = () => {
+		Email.send({
+		SecureToken : "99eb83debac400ffe5d506185001da8d",
+		To : subEmail,
+		From : "warunkBaca@gmail.com",
+		Subject : "Email Subscribtion",
+		Body : `<html>
+		<h2>Congratulation, and many Thanks</h2>
+		<strong>Thanks for your subscription to our website</strong>
+		<br></br><em>	Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis laboriosam qui, placeat incidunt natus expedita laborum cumque culpa, perspiciatis officia architecto quam aliquam mollitia harum dolore saepe id? Aliquam odit ut, numquam ipsam quod tempore assumenda impedit facere dignissimos ea, magnam veritatis quo nam ipsum pariatur reiciendis tempora earum modi!
+		</em>
+		</html>`
+		}).then(
+			message => alert("mail sent successfully")
+		);
+	}
+
+
+
+	const getByID = async (id) => {
+		let response = await fetch(`https://5e92be81bbff810016969173.mockapi.io/api/v1/books/${id}`)
+		let result = await response.json()
+		let items = [{
+			count : 0,
+			id: result.id
+		}]
+		let jumlahBarang = document.getElementById('jumlahBarang').value;
+		items.count = jumlahBarang;
+
+		localStorage.setItem('cart', JSON.stringify(items))
+
+
+		let cartStorage = JSON.parse(localStorage.getItem('cart' || "[]"))
+		
+		if(cartStorage.id === result.id){
+			items.count = items.count + jumlahBarang
+		} else {
+			items.push({'id': result.id, 'count': jumlahBarang})
+		}
+		let countTotal = cartStorage.reduce((count1, count2) => {
+			return count1 + count2
+		})
+
+		document.getElementById('updateCart').innerHTML = countTotal
+	}
